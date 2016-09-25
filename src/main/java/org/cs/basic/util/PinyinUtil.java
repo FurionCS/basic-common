@@ -6,7 +6,11 @@ import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
 import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
-
+/**
+ * 拼音工具类
+ * @author Mr.Cheng
+ *
+ */
 public class PinyinUtil {
 	private final static HanyuPinyinOutputFormat format = new HanyuPinyinOutputFormat();
 	static{
@@ -14,7 +18,12 @@ public class PinyinUtil {
 		format.setToneType(HanyuPinyinToneType.WITHOUT_TONE);
 		format.setVCharType(HanyuPinyinVCharType.WITH_V);
 	}
-	
+	/**
+	 * 将字符串转变成拼音
+	 * @param str
+	 * @param fill
+	 * @return
+	 */
 	public static String str2Pinyin(String str,String fill) {
 		try {
 			StringBuffer sb = new StringBuffer();
@@ -46,7 +55,11 @@ public class PinyinUtil {
 		}
 		return null;
 	}
-	
+	/**
+	 * 第一个字符转变为拼音
+	 * @param str
+	 * @return
+	 */
 	public static String strFirst2Pinyin(String str) {
 		try {
 			StringBuffer sb = new StringBuffer();

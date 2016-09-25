@@ -8,7 +8,12 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
+/**
+ * jackson工具类
+ * 通过JsonUtil.getInstance().方法名
+ * @author Mr.Cheng
+ *
+ */
 public class JsonUtil {
 	private static JsonUtil ju;
 	private static JsonFactory jf;
@@ -31,7 +36,11 @@ public class JsonUtil {
 		if(jf==null) jf = new JsonFactory();
 		return jf;
 	}
-	
+	/**
+	 * 将对象转换成json 可以将list 转换成json
+	 * @param obj
+	 * @return
+	 */
 	public String obj2json(Object obj) {
 		JsonGenerator jg = null;
 		try {
@@ -52,7 +61,12 @@ public class JsonUtil {
 		}
 		return null;
 	}
-	
+	/**
+	 * 将json 对象转变成obj
+	 * @param json
+	 * @param clz
+	 * @return
+	 */
 	public Object json2obj(String json,Class<?> clz) {
 		try {
 			mapper = getMapper();
