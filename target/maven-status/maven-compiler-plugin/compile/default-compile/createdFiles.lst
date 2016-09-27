@@ -1,3 +1,7 @@
 org\cs\basic\util\PinyinUtil.class
+org\cs\basic\ms\HandleDataSource.class
+org\cs\basic\ms\ChooseDataSource.class
+org\cs\basic\ms\DataSource.class
 org\cs\basic\util\EnumUtils.class
+org\cs\basic\ms\DataSourceAspect.class
 org\cs\basic\util\JsonUtil.class
