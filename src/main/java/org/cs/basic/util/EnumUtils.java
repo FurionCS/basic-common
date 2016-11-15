@@ -15,7 +15,7 @@ public class EnumUtils {
 	 * @return
 	 */
 	public static List<Integer> enum2Ordinal(Class<? extends Enum> clz){
-		if(clz.isEnum()) return null;
+		if(!clz.isEnum()) return null;
 		Enum[] enums=clz.getEnumConstants();
 		List<Integer> rels=new ArrayList<Integer>();
 		for(Enum en:enums){
@@ -29,7 +29,7 @@ public class EnumUtils {
 	 * @return
 	 */
 	public static List<String> enum2Name(Class<? extends Enum> clz){
-		if(clz.isEnum()) return null;
+		if(!clz.isEnum()) return null;
 		Enum[] enums=clz.getEnumConstants();
 		List<String> rels=new ArrayList<String>();
 		for(Enum en:enums){
@@ -43,7 +43,7 @@ public class EnumUtils {
 	 * @return
 	 */
 	public static Map<Integer,String> enum2Map(Class<? extends Enum> clz){
-		if(clz.isEnum()) return null;
+		if(!clz.isEnum()) return null;
 		Enum[] enums=clz.getEnumConstants();
 		Map<Integer,String> rels=new HashMap<Integer,String>();
 		for(Enum en:enums){
