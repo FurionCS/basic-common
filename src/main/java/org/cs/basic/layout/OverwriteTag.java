@@ -32,7 +32,9 @@ public class OverwriteTag extends BodyTagSupport {
     ServletRequest request = pageContext.getRequest();
     //标签内容
     BodyContent bodyContent = getBodyContent();
-    request.setAttribute(PREFIX+name,  StringUtils.trim(bodyContent.getString()));		
+    if(bodyContent!=null){
+    	request.setAttribute(PREFIX+name,  StringUtils.trim(bodyContent.getString()));	
+    }
     // TODO Auto-generated method stub
     return super.doEndTag();
   }

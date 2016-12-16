@@ -5,7 +5,11 @@ import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.util.Random;
-
+/**
+ * 验证码方法
+ * @author Mr.Cheng
+ *
+ */
 public class Captcha {
 	private int width;
 	private int height;
@@ -66,7 +70,11 @@ public class Captcha {
 		}
 		return sb.toString();
 	}
-	
+	/**
+	 * 验证码
+	 * @param checkcode
+	 * @return
+	 */
 	public BufferedImage generateCheckImage(String checkcode){
 		BufferedImage img=new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 		Graphics2D graphic=img.createGraphics();
